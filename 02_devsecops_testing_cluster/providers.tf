@@ -6,3 +6,7 @@ terraform {
     key                  = "devsecops-testing.tfstate"
   }
 }
+
+provider "azurerm" {
+  features {}
+}

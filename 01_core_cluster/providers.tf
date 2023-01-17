@@ -6,3 +6,7 @@ terraform {
     key                  = "core.tfstate"
   }
 }
+
+provider "azurerm" {
+  features {}
+}
