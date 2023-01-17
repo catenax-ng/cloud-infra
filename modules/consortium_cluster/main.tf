@@ -23,7 +23,7 @@ resource "azurerm_dns_a_record" "a-record" {
   target_resource_id  = azurerm_public_ip.public_ip.id
   resource_group_name = var.dns_zone_resource_group_name
 
-  provider = var.dns_zone_provider
+  provider = azurerm.speedboat
 }
 
 resource "azurerm_kubernetes_cluster" "aks_cluster" {
