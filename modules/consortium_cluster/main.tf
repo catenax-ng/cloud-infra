@@ -13,7 +13,7 @@ resource "azurerm_public_ip" "public_ip" {
 
   zones = ["1", "2", "3"]
 
-  ddos_protection_mode = "Disabled"
+  ddos_protection_mode = var.public_ip_ddos_protection_mode
 }
 
 resource "azurerm_dns_a_record" "a-record" {

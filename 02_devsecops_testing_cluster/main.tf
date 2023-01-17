@@ -4,6 +4,7 @@ module "devsecops_testing_cluster" {
   cluster_name = "devsecops-testing"
 
   k8s_cluster_node_count = 4
+  public_ip_ddos_protection_mode = "VirtualNetworkInherited"
 
   provider_azure_dns_subscription_id       = var.provider_azure_dns_subscription_id
   provider_azure_subscription_id           = var.provider_azure_subscription_id

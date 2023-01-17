@@ -93,3 +93,9 @@ variable "provider_azure_dns_subscription_id" {
   description = "The Azure subscription ID for the DNS entries. Only used, because DNS zone and AKS resources are in different subscriptions"
   type = string
 }
+
+variable "public_ip_ddos_protection_mode" {
+  description = "The ddos_protection_mode for the public IP resource. 'Disabled' on default"
+  type = string
+  default = "Disabled"
+}
