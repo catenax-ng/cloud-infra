@@ -3,6 +3,9 @@ module "dev_cluster" {
 
   cluster_name = "dev"
 
+  default_node_pool_name = "defaultng"
+  k8s_cluster_node_count = 6
+
   provider_azure_dns_subscription_id       = var.provider_azure_dns_subscription_id
   provider_azure_subscription_id           = var.provider_azure_subscription_id
   provider_azure_tenant_id                 = var.provider_azure_tenant_id
