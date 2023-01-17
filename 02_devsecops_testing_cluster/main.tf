@@ -3,6 +3,8 @@ module "devsecops_testing_cluster" {
 
   cluster_name = "devsecops-testing"
 
+  k8s_cluster_node_count = 4
+
   provider_azure_dns_subscription_id       = var.provider_azure_dns_subscription_id
   provider_azure_subscription_id           = var.provider_azure_subscription_id
   provider_azure_tenant_id                 = var.provider_azure_tenant_id
