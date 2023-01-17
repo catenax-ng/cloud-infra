@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "resource_group" {
 resource "azurerm_public_ip" "public_ip" {
   name                = "cx-${var.cluster_name}-public-ip"
   location            = azurerm_resource_group.resource_group.location
-  resource_group_name = azurerm_resource_group.resource_group.name
+  resource_group_name = azurerm_kubernetes_cluster.aks_cluster.node_resource_group
 
   allocation_method = "Static"
   sku               = "Standard"
