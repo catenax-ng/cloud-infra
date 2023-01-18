@@ -11,21 +11,3 @@ module "int_cluster" {
   provider_service_principal_client_id     = var.provider_service_principal_client_id
   provider_service_principal_client_secret = var.provider_service_principal_client_secret
 }
-
-resource "azurerm_public_ip" "esc-backbone-int-ip-1" {
-  name                = "esc-backbone-static-ip-1"
-  allocation_method   = "Static"
-  location            = module.int_cluster.resource_group_location
-  resource_group_name = "cxtsi-hotel-budapest-rg"
-
-  sku = "Basic"
-}
-
-resource "azurerm_public_ip" "esc-backbone-int-ip-2" {
-  name                = "esc-backbone-static-ip-2"
-  allocation_method   = "Static"
-  location            = module.int_cluster.resource_group_location
-  resource_group_name = "cxtsi-hotel-budapest-rg"
-
-  sku = "Basic"
-}
