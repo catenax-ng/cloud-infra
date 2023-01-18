@@ -17,7 +17,7 @@ resource "azurerm_public_ip" "esc-backbone-dev-ip-1" {
   name                = "esc-backbone-dev-ip-1"
   allocation_method   = "Static"
   location            = module.dev_cluster.resource_group_location
-  resource_group_name = module.dev_cluster.resource_group_name
+  resource_group_name = module.dev_cluster.node_pool_resource_group
 
   sku = "Standard"
   zones = ["1", "2", "3"]
@@ -27,7 +27,7 @@ resource "azurerm_public_ip" "esc-backbone-dev-ip-2" {
   name                = "esc-backbone-dev-ip-2"
   allocation_method   = "Static"
   location            = module.dev_cluster.resource_group_location
-  resource_group_name = module.dev_cluster.resource_group_name
+  resource_group_name = module.dev_cluster.node_pool_resource_group
 
   sku = "Standard"
   zones = ["1", "2", "3"]
