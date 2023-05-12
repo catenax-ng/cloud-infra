@@ -43,6 +43,7 @@ resource "azurerm_key_vault" "edc_key_vault" {
   location            = azurerm_resource_group.team_specific_resources.location
   resource_group_name = azurerm_resource_group.team_specific_resources.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
+  enable_rbac_authorization = true
 
   sku_name            = var.sku_name
 }
@@ -61,9 +62,9 @@ resource "vault_generic_secret" "secret-edc-sp-credentials" {
   path      = "/edc/azure-key-vault"
   data_json = <<EOT
 {
-  "key_vault_uri":   "${azurerm_key_vault.edc_key_vault.vault_uri}",
-  "sp_client_id": "${azuread_service_principal.edc_key_vault_sp.application_id}"
-  "sp_client_secret": "${azuread_service_principal_password.edc_keyvault_sp_password.value}"
+  "key_vault_uri": "${azurerm_key_vault.edc_key_vault.vault_uri}",
+  "sp_client_id": "${azuread_service_principal.edc_key_vault_sp.application_id}",
+  "sp_client_secret": "${azuread_service_principal_password.edc_keyvault_sp_password.value}",
 }
 EOT
 }
