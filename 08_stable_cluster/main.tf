@@ -3,6 +3,7 @@ module "stable_cluster" {
 
   cluster_name = "stable"
 
+  k8s_cluster_node_count = 4
   public_ip_ddos_protection_mode = "VirtualNetworkInherited"
   k8s_version = "1.25.6"
 
