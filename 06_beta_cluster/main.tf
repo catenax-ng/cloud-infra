@@ -4,7 +4,7 @@ module "beta_cluster" {
   cluster_name = "beta"
 
   public_ip_ddos_protection_mode = "VirtualNetworkInherited"
-  k8s_version = "1.23.12"
+  k8s_cluster_node_count = 4
 
   provider_azure_dns_subscription_id       = var.provider_azure_dns_subscription_id
   provider_azure_subscription_id           = var.provider_azure_subscription_id
