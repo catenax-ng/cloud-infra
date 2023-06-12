@@ -27,7 +27,7 @@ the [official installation instructions](https://learn.microsoft.com/en-us/cli/a
 Terraforming the environments almost always is done by issuing the following commands on your local machine:
 
 ```shell
-# Login with Azrue CLI
+# Login with Azure CLI
 az login --tenant <catena-x-azure-tenant-id>
 # Get credentials for Azure Storage account containing the terraform state files
 export ARM_ACCESS_KEY=$(az storage account keys list --resource-group cx-devsecops-tfstates --account-name cxdevsecopstfstate --query '[0].value' -o tsv)

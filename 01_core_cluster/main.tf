@@ -2,6 +2,7 @@ module "core_cluster" {
   source = "../modules/consortium_cluster"
 
   cluster_name = "core"
+  k8s_cluster_node_count = 4
 
   provider_azure_dns_subscription_id       = var.provider_azure_dns_subscription_id
   provider_azure_subscription_id           = var.provider_azure_subscription_id

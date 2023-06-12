@@ -48,7 +48,7 @@ variable "k8s_cluster_node_count" {
 variable "k8s_version" {
   description = "AKS k8s Version to deploy"
   type        = string
-  default     = "1.24.6"
+  default     = "1.25.6"
 }
 
 variable "enable_auto_scaling" {

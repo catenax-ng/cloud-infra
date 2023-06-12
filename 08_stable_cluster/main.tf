@@ -5,7 +5,6 @@ module "stable_cluster" {
 
   k8s_cluster_node_count = 4
   public_ip_ddos_protection_mode = "VirtualNetworkInherited"
-  k8s_version = "1.25.6"
 
   provider_azure_dns_subscription_id       = var.provider_azure_dns_subscription_id
   provider_azure_subscription_id           = var.provider_azure_subscription_id
