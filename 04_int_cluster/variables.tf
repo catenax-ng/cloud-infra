@@ -43,13 +43,13 @@ variable "k8s_vm_size" {
 variable "k8s_cluster_node_count" {
   description = "The number of kubernetes nodes to create for the k8s cluster"
   type        = number
-  default     = 7
+  default     = 6
 }
 
 variable "k8s_version" {
   description = "AKS k8s Version to deploy"
   type        = string
-  default     = "1.26.6"
+  default     = "1.27.3"
 }
 
 variable "enable_auto_scaling" {
