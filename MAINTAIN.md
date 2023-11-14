@@ -14,7 +14,11 @@
 - Perform terraform `plan` to validate the changes to kubernetes version of our AKS resources
 - Run terraform `apply` to upgrade our resources to the new kubernetes version if the plan is valid
 
-## Needed Key Vault Secrets
+## Key vault secrets
+
+The following secrets are needed and stored in our vault to run the terraform scripts: 
+
+vault path: `devsecops/azure/demo.catena-x.net/service-principals/automation`.
 
 | Naming for automation secret in vault | Naming in our Terraform scripts            |
 |---------------------------------------|--------------------------------------------|
