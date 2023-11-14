@@ -5,7 +5,7 @@
 - Login to Azure Portal
 - Check our version for the Cluster
 - Check the available versions for the cluster within the Azure Portal
-- Read the linked documentation for the upgrade form Kubernetes and recommendations for upgrading.
+- Read the linked documentation for the Kubernetes upgrade and recommendations for upgrading.
 
 ## Upgrading kubernetes version
 
