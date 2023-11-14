@@ -1,10 +1,10 @@
 # Maintaining the cloud infra
 
-## Find the available kubernetes version for our Azure AKS cluster
+## AKS (Azure Kubernetes Service) cluster management
 
 - Login to Azure Portal
 - Check our version for the Cluster
-- Check the available versions for the cluster within the Azure Portal
+- Check the available versions for the clusters within the Azure Portal
 - Read the linked documentation for the Kubernetes upgrade and recommendations for upgrading.
 
 ## Upgrading kubernetes version
