@@ -2,7 +2,7 @@ module "stable_cluster" {
   source = "../modules/consortium_cluster"
 
   cluster_name = "stable"
-  k8s_version = "1.25.6"
+  k8s_version = "1.26.6"
   k8s_cluster_node_count = 4
   public_ip_ddos_protection_mode = "VirtualNetworkInherited"
 
