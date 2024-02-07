@@ -43,7 +43,7 @@ variable "k8s_vm_size" {
 variable "k8s_cluster_node_count" {
   description = "The number of kubernetes nodes to create for the k8s cluster"
   type        = number
-  default     = 6
+  default     = 7
 }
 
 variable "k8s_version" {
@@ -61,7 +61,7 @@ variable "enable_auto_scaling" {
 variable "max_count" {
   description = "If auto scaling is enabled the maximum number of nodes in the pool"
   type        = number
-  default     = 7
+  default     = 8
 }
 
 variable "min_count" {
