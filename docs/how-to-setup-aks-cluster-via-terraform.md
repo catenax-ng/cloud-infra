@@ -1,6 +1,6 @@
 #  How to setup and AKS cluster via terraform
 
-:exclamation: This is partly outdated information please see our general [README.md](../README.md)
+:exclamation: This is partly outdated information please see our general [README.md#create-a-new-environment](../README.md#create-a-new-environment)
 
 This guide is only for those who operate the environment
 
@@ -27,16 +27,6 @@ az ad sp create-for-rbac --skip-assignment
 
 You'll need the 'client id' and 'secret id' values later on.
 
-## Terraform state
-
-Terraform uses [`state`](https://www.terraform.io/language/state) to track status and differences of your real world
-resources and your configuration. While being very useful in most situation, we actively decided to NOT manage/save the
-terraform state to track our AKS cluster resources. We think, that sharing and storing the state file is too much of an
-effort.
-
-In our case of demonstration environments the impact of recreating the cluster from scratch and deploying all the tools
-and apps is not too high.
-
 ## Creating the AKS cluster
 
 The following steps show you how to...
@@ -46,23 +36,11 @@ The following steps show you how to...
 - apply that plan to your Azure subscription
 
 It is assumed, that before running any terraform commands, you cloned
-the [k8s-cluster-stack](https://github.com/catenax-ng/k8s-cluster-stack)
+the [cloud-infra](https://github.com/catenax-ng/cloud-infra)
 repository. You should then open a terminal session and navigate to the repository path.
 
 For the following instructions it is also assumed, that you already navigated to the AKS related terraform directory,
 which is at `/terraform/01_core_cluster/` in the repository.
-
-### Removing existing terraform config
-
-We always run the AKS cluster creation from a clean working directory. So in case you did run any terraform commands
-before, there are some files, that could disturb the clean run. To get rid of these files remove state files, plans and
-the .terraform directory
-
-```shell
-rm *.tfstate*
-rm *.tfplan
-rm -rf .terraform
-```
 
 ### Initialize terraform
 
